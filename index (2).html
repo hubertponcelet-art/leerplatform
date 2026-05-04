@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leerplatform — 2e jaar Secundair</title>
+<style>
+:root {
+  --c1: #1a3a5c;
+  --c2: #b8860b;
+  --c3: #f5f0e8;
+  --bg: #fefcf7;
+  --txt: #1e1e1e;
+  --border: #d0c8b8;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--txt);
+  background: var(--bg);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+.header {
+  background: var(--c1);
+  color: #fff;
+  padding: 28px 24px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.header h1 { font-size: 1.6em; margin-bottom: 6px; }
+.header p { font-size: 0.95em; opacity: 0.85; }
+
+.section-title {
+  font-size: 1.2em;
+  color: var(--c1);
+  margin: 24px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--c2);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.course-card {
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 22px;
+  text-decoration: none;
+  color: var(--txt);
+  display: block;
+  transition: border-color 0.15s;
+}
+.course-card:hover, .course-card:focus {
+  border-color: var(--c1);
+  outline: none;
+}
+.course-card .icon {
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+.course-card h3 {
+  font-size: 1.15em;
+  color: var(--c1);
+  margin-bottom: 6px;
+}
+.course-card p {
+  font-size: 0.92em;
+  color: #555;
+  margin-bottom: 8px;
+}
+.course-card .tag {
+  display: inline-block;
+  background: var(--c3);
+  color: var(--c2);
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+.course-card .tag.coming {
+  background: #eee;
+  color: #999;
+}
+
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.85em;
+  color: #999;
+}
+
+@media (max-width: 600px) {
+  body { padding: 12px 10px 50px; }
+  .header { padding: 20px 16px; }
+  .header h1 { font-size: 1.3em; }
+  .course-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Leerplatform</h1>
+  <p>2e jaar secundair onderwijs — Geschiedenis</p>
+  <p>Aangepast voor leerlingen met TDA</p>
+</div>
+
+<h2 class="section-title">Beschikbare cursussen</h2>
+
+<div class="course-grid">
+
+  <a href="het-oude-rome.html" class="course-card">
+    <div class="icon">🏛️</div>
+    <h3>Het Oude Rome</h3>
+    <p>Van koninkrijk tot keizerrijk. 7 topics: stichting, republiek, Punische oorlogen, burgeroorlogen, Augustus, bloei & verval.</p>
+    <span class="tag">7 lessen — 84+ oefeningen</span>
+  </a>
+
+  <div class="course-card" style="opacity:0.5; cursor:default;">
+    <div class="icon">🏺</div>
+    <h3>Binnenkort beschikbaar</h3>
+    <p>Nieuwe cursussen worden hier toegevoegd zodra de leerstof wordt aangeleverd.</p>
+    <span class="tag coming">Binnenkort</span>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Elke cursus bevat: leerstof in chunks, interactieve oefeningen, afdrukbaar examen (PDF) en correctiesleutel.</p>
+</div>
+
+</body>
+</html>
